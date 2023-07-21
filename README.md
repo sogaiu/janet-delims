@@ -170,7 +170,7 @@ delimiters for "closing things up" and thus one could do:
   (string fragment "\n" ;(closing-delims fragment)))
 ```
 
-`close-delims` is not implemented this way because it would intefere
+`close-delims` is not implemented this way because it would interfere
 with other cases (because of the extra newline) and in practice the
 comment case has not surfaced in the context of editor use.
 
