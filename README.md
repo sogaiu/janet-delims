@@ -135,6 +135,19 @@ nil
 @["`" "`"]
 ```
 
+## Why
+
+[ajrepl](https://github.com/sogaiu/ajrepl) and
+[janet-editor-elf](https://github.com/sogaiu/janet-editor-elf) use
+code from `janet-delims` to implement functionality including:
+
+* indenting the current line
+* indenting a region
+* determining an expression before the cursor
+* wrapping an expression in another form
+* finding the bounds of an expression associated with the cursor
+  location
+
 ## Footnotes
 
 [1] If the fragment ends with a line comment (without a trailing
