@@ -178,6 +178,12 @@
   # =>
   @[`"`]
 
+  (closing-delims
+    (string "``\n"
+            "  hello"))
+  # =>
+  @["`" "`"]
+
   (closing-delims `("what is going on?)`)
   # =>
   @[`"` `)`]
@@ -201,12 +207,6 @@
   (closing-delims "")
   # =>
   @[]
-
-  (closing-delims
-    (string "``\n"
-            "  hello"))
-  # =>
-  @["`" "`"]
 
   )
 

@@ -104,6 +104,12 @@ nil
 # =>
 @[`"`]
 
+(closing-delims
+  (string "``\n"
+          "  hello"))
+# =>
+@["`" "`"]
+
 (closing-delims `("what is going on?)`)
 # =>
 @[`"` `)`]
@@ -127,12 +133,6 @@ nil
 (closing-delims "")
 # =>
 @[]
-
-(closing-delims
-  (string "``\n"
-          "  hello"))
-# =>
-@["`" "`"]
 ```
 
 ## Why
