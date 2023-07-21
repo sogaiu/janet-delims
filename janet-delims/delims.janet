@@ -252,4 +252,10 @@
   # =>
   (string maybe-code ")))")
 
+  # XXX: would prefer different result, i.e. "[:a # hello\n]"
+  (close-delims "[:a # hello")
+  # =>
+  "[:a # hello]"
+
   )
+

@@ -7,7 +7,7 @@ source code.
 
 Provided functions include:
 
-* `close-delims` - given a fragment of Janet source code, attempts to
+* `close-delims` - given a fragment of Janet source code, tries [1] to
   return a "delimiter-closed" version of the fragment.
 
 * `closing-delims` - given a fragment of Janet source code, tries to
@@ -134,4 +134,30 @@ nil
 # =>
 @["`" "`"]
 ```
+
+## Footnotes
+
+[1] If the fragment ends with a line comment (without a trailing
+newline), `close-delims` does not give a correct result, e.g.
+
+```janet
+(close-delims "[:a # hello")
+# =>
+"[:a # hello]"
+```
+
+Possibly if the result was like `[:a # hello\n]` it might be nicer.
+
+The `closing-delims` function is available to obtain the necessary
+delimiters for "closing things up" and thus one could do:
+
+```janet
+(defn my-close-delims
+  [fragment]
+  (string fragment "\n" ;(closing-delims fragment)))
+```
+
+`close-delims` is not implemented this way because it would intefere
+with other cases (because of the extra newline) and in practice the
+comment case has not surfaced in the context of editor use.
 
