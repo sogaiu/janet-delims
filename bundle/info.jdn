@@ -5,19 +5,13 @@
  :vendored
  [{:name "some-bundle-bits"
    :url "https://github.com/sogaiu/some-bundle-bits"
-   :tag "892a847b3c589b24d09c405de0a8bbd727adcd3d"
-   :prefix "bundle"
-   :files ["sbb.janet"]}
-  {:name "janet-ex-as-tests"
-   :url "https://github.com/sogaiu/janet-ex-as-tests"
-   :tag "4f58b7d5e2521cdf609b625ceb7366348c958aee"
-   :files ["jeat"
-           # XXX: if "test" exists already, following is safer
-           ["test/trigger-jeat.janet" "test/"]]}]
+   :tag "7ddb7ec53a6eb8c81b0c22bb7710a01fff57a759"
+   :paths [["sbb.janet" "bundle/"]]}
+  {:name "jtfm"
+   :url "https://github.com/sogaiu/jtfm"
+   :tag "90435e12e3f787ef8b2b0e3a6e6e967dd5fe729a"
+   :paths [["jtfm.janet" "bin/"]]}]
 
  :sources
- [{:prefix "janet-delims"
-   :items [["janet-delims/delims.janet" "delims.janet"]
-           ["janet-delims/init.janet" "init.janet"]]}]
- }
+ [{:items ["janet-delims"]}]}
 
